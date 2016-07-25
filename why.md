@@ -1,4 +1,4 @@
-## Why?
+## Why Finagle?
 
 
 ## Does anyone remember this?
@@ -11,34 +11,22 @@
 
 ## Twitter was a Rails monolith
 
-- millions of users
+- scaling to millions of users
 - Ruby not the best at that scale
 - (Micro)services were the way forward
 
 
-## Enter Finagle
+## Finagle Principles
 - Simplicity
 - Composability
 - Separation of Concerns
 
 
-## Example: Filters
-- You can decorate a service with a Filter
-- Filters can act on requests or responses, independently of the service
-```
-abstract class Filter[-ReqIn, +RepOut, +ReqOut, -RepIn]
-  extends ((ReqIn, Service[ReqOut, RepIn]) => Future[RepOut])
-```
+## Twitter's architecture
 
-
-## Filter
-- You create a filtered service using the "andThen" combinator:
-
-```
-val timeoutFilter = new Filter[http.Request, http.Response,
-                               http.Request, http.Response](...)
-
-val serviceWithTimeout: Service[http.Request, http.Response] =
-  timeoutFilter andThen service
-
-```
+<figure>
+<img src="https://monkey.org/~marius/redux/arch.png" />
+<figcaption>
+  Source: https://monkey.org/~marius/redux.html
+</figcaption>
+</figure>

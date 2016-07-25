@@ -5,6 +5,7 @@
 
 - Finagle 101 (ScalaDays New York 2016)
 - RPC Redux
+  - https://monkey.org/~marius/redux.html
 
 
 ## Websites

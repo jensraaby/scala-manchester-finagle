@@ -13,7 +13,7 @@ trait Service[-Req, +Rep] extends (Req => Future[Rep])
 ```
 
 
-## Minimum viable Service
+## Minimum Viable Service
 
 ```
 val service = new Service[http.Request, http.Response] {
@@ -28,7 +28,7 @@ val service = new Service[http.Request, http.Response] {
 
 ## Exporting our service
 
-- We expose our service on the HTTP protocol on port 8080:
+- We can expose our service on the HTTP protocol on port 8080:
 ```
 val server = Http.serve(":8080", service)
 Await.ready(server)
@@ -36,6 +36,10 @@ Await.ready(server)
 
 
 ## Creating and using clients
+
+- Clients maintain a session with one or more replicas
+- Making a request:
+
 ```
 val client: Service[http.Request, http.Response] =
                         Http.newService("localhost:8080")
@@ -44,7 +48,27 @@ val request = http.Request(http.Method.Get, "/")
 request.host = "localhost"
 
 val response: Future[http.Response] = client(request)
+
 ```
 
 
-## Demo
+## Filters
+- You can decorate a service with a Filter
+- Filters can act on requests or responses, independently of the service
+```
+abstract class Filter[-ReqIn, +RepOut, +ReqOut, -RepIn]
+  extends ((ReqIn, Service[ReqOut, RepIn]) => Future[RepOut])
+```
+
+
+## Composing
+- You create a filtered service using the "andThen" combinator:
+
+```
+val timeoutFilter = new Filter[http.Request, http.Response,
+                               http.Request, http.Response](...)
+
+val serviceWithTimeout: Service[http.Request, http.Response] =
+  timeoutFilter andThen service
+
+```
