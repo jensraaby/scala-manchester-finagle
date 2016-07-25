@@ -6,6 +6,10 @@
 </figure>
 
 
+## Finagle's law
+"Anything that can go wrong, will - at the worst possible moment."
+
+
 ## Twitter was a Rails monolith
 
 - scaling to millions of users
@@ -13,14 +17,10 @@
 - (Micro)services were the way forward
 
 
-## Finagle's law
-"Anything that can go wrong, will - at the worst possible moment."
-
-
 ## Twitter's architecture now
 
 <figure>
-<img src="https://monkey.org/~marius/redux/arch.png" />
+<img height=400 src="https://monkey.org/~marius/redux/arch.png" />
 <figcaption>
   Source: https://monkey.org/~marius/redux.html
 </figcaption>

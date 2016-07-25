@@ -1,6 +1,10 @@
 # Thanks
 - Any questions?
 
+- Sample code and these slides are on github:
+  - https://github.com/jensraaby/scala-manchester-finagle
+  - http://jens.raaby.co.uk/scala-manchester-finagle/
+
 
 ## Talks
 
