@@ -9,7 +9,6 @@ import com.twitter.finatra.http.Controller
 import scala.xml.XML
 
 
-
 class BBCController @Inject()(bbcClient: BBCClient) extends Controller {
 
   get("/news") { request: Request =>
@@ -19,7 +18,7 @@ class BBCController @Inject()(bbcClient: BBCClient) extends Controller {
 
       response.ok.html(
         "<ul>" +
-        items.map(item => <li>{(item \ "title").text}</li>)
+          items.map(item => <li>{(item \ "title").text}</li>)
         + "</ul>"
       )
     }

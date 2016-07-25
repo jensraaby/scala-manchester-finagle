@@ -5,6 +5,7 @@ import com.twitter.finatra.request.{Header, QueryParam}
 
 
 case class FancyRequest(@QueryParam name: String, @Header accept: String)
+
 case class FancyResponse(name: String, accept: String)
 
 
