@@ -16,12 +16,6 @@
 - (Micro)services were the way forward
 
 
-## Finagle Principles
-- Simplicity
-- Composability
-- Separation of Concerns
-
-
 ## Twitter's architecture
 
 <figure>
@@ -30,3 +24,9 @@
   Source: https://monkey.org/~marius/redux.html
 </figcaption>
 </figure>
+
+
+## Finagle Principles
+- Simplicity
+- Composability
+- Separation of Concerns

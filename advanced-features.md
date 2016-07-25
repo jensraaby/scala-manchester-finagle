@@ -31,7 +31,6 @@ val client = Http.client
 
 ```
 val server = Http.server
-         .withStreaming(true)
          .withAdmissionControl
             .concurrencyLimit(maxConcurrentRequests = 20,
                               maxWaiters = 10)
