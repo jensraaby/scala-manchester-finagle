@@ -1,7 +1,7 @@
 ## Why Finagle?
 
 
-## Does anyone remember this?
+## Circa 2009
 
 <figure>
 <img src="http://www.yiyinglu.com/wp-content/uploads/2013/11/lifting-a-dreamer-2009.jpg" />

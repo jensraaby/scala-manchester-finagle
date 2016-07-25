@@ -2,7 +2,7 @@
 
 - Finagle is designed for large scale distributed systems
 - It does things on the session level (OSI layer 5)
-- You have to determine semantics of HTTP 500 responses
+- You have to determine semantics of responses (e.g. HTTP 500)
 
 
 ## Clients
@@ -14,11 +14,12 @@
 
 ```
 val client = Http.client
-  .withTransport.tls(hostname)
+  .withTransport.tls("search.mycompany.com")
   .withRequestTimeout(2.seconds)
   .withLabel("searchAPI")
   .withSessionQualifier.noFailFast
-  .newService("search.eu-west-1.mycompany.com:443,search.eu-central-1.mycompany.com:443")
+  .newService("search.eu-west-1.mycompany.com:443,
+               search.eu-central-1.mycompany.com:443")
 ```
 
 
