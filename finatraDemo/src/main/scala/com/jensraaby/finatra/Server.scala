@@ -13,6 +13,8 @@ class Server extends HttpServer {
       .filter[TraceIdMDCFilter[Request, Response]]
       .filter[CommonFilters]
       .add[HelloWorldController]
+      .add[FancyController]
+      .add[BBCController]
   }
 
 }

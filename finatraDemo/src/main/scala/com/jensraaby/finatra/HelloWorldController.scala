@@ -8,4 +8,8 @@ class HelloWorldController extends Controller {
   get("/") { request: Request =>
     "Hello World!"
   }
+
+  get("/hello/:name") { request: Request =>
+    s"Hello ${request.params("name")}"
+  }
 }
