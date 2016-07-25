@@ -44,7 +44,7 @@ lazy val finatraDependencies = Seq(
 
   "org.mockito" % "mockito-core" % "1.9.5" % "test",
   "org.scalatest" %% "scalatest" % "2.2.3" % "test",
-  "org.specs2" %% "specs2" % "2.3.12" % "test"
+  "org.specs2" %% "specs2" % "2.3.12" % "test",
 
-    "org.scala-lang.modules" %% "scala-xml" % "1.0.5"
+  "org.scala-lang.modules" %% "scala-xml" % "1.0.5"
 )
