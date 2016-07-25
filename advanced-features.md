@@ -23,6 +23,11 @@ val client = Http.client
 ```
 
 
+## Aside: Naming
+- At Twitter, logical names or paths are usually provided rather than hostnames
+- Zookeeper is used to register hosts and to resolve replica sets for clients
+
+
 ## Servers
 
 - Optimised for high throughput

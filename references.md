@@ -1,4 +1,5 @@
-# Useful resources
+# Thanks
+- Any questions?
 
 
 ## Talks

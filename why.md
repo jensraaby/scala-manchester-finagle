@@ -1,7 +1,4 @@
-## Why Finagle?
-
-
-## Circa 2009
+## Twitter Circa 2008-2010
 
 <figure>
 <img src="http://www.yiyinglu.com/wp-content/uploads/2013/11/lifting-a-dreamer-2009.jpg" />
@@ -16,7 +13,11 @@
 - (Micro)services were the way forward
 
 
-## Twitter's architecture
+## Finagle's law
+"Anything that can go wrong, will - at the worst possible moment."
+
+
+## Twitter's architecture now
 
 <figure>
 <img src="https://monkey.org/~marius/redux/arch.png" />

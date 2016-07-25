@@ -42,7 +42,7 @@ Await.ready(server)
 
 ```
 val client: Service[http.Request, http.Response] =
-                        Http.newService("localhost:8080")
+                        Http.client.newService("localhost:8080")
 
 val request = http.Request(http.Method.Get, "/")
 request.host = "localhost"
